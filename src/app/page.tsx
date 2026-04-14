@@ -196,64 +196,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Nominate Section */}
-      <section id="nominate" className="py-16 md:py-24 border-t border-navy/50 bg-navy/30">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-gradient">50 Ranked. 50 Seats Open.</span>
-            </h2>
-            <p className="text-gray-300 mb-3 text-lg">
-              The Global 100 is not complete. We are looking for the next 50 leaders
-              who are transforming global business through sustainable leadership.
-            </p>
-            <p className="text-gray-400 mb-8">
-              Nominate a CEO, Chair, or senior executive you believe deserves a place
-              on the Global 100. All nominees are assessed through the OTA Power Score
-              methodology and reviewed by our advisory panel.
-            </p>
-            
-              href="mailto:nominations@otamediagroup.com?subject=Global%20100%20Nomination"
-              className="inline-block px-8 py-4 bg-gold text-dark font-bold rounded-lg text-lg hover:bg-opacity-90 transition-all"
-            >
-              Nominate a Leader
-            </a>
-            <p className="text-xs text-gray-500 mt-4">
-              Nominations close 31 December 2026. All submissions reviewed by the OTA Media editorial team.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Nominate Section */}
-      <section id="nominate" className="py-16 md:py-24 border-t border-navy/50 bg-navy/30">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-gradient">50 Ranked. 50 Seats Open.</span>
-            </h2>
-            <p className="text-gray-300 mb-3 text-lg">
-              The Global 100 is not complete. We are looking for the next 50 leaders
-              who are transforming global business through sustainable leadership.
-            </p>
-            <p className="text-gray-400 mb-8">
-              Nominate a CEO, Chair, or senior executive you believe deserves a place
-              on the Global 100. All nominees are assessed through the OTA Power Score
-              methodology and reviewed by our advisory panel.
-            </p>
-            
-              href="mailto:nominations@otamediagroup.com?subject=Global%20100%20Nomination"
-              className="inline-block px-8 py-4 bg-gold text-dark font-bold rounded-lg text-lg hover:bg-opacity-90 transition-all"
-            >
-              Nominate a Leader
-            </a>
-            <p className="text-xs text-gray-500 mt-4">
-              Nominations close 31 December 2026. All submissions reviewed by the OTA Media editorial team.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-navy to-dark border-t border-navy/50">
         <div className="container-custom text-center">
@@ -265,6 +207,44 @@ export default function Home() {
           <a href="https://index.otamediagroup.com" className="btn-primary">
             Explore Leadership Index
           </a>
+        </div>
+      </section>
+
+      {/* Enterprise Security Banner */}
+      <section className="py-10 md:py-14 border-t border-navy/50 bg-dark">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <h3 className="text-lg md:text-xl font-bold tracking-widest uppercase text-white">
+                Enterprise-Grade Security
+              </h3>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 max-w-4xl mx-auto text-center">
+            <div>
+              <p className="text-sm font-semibold text-gold mb-1">256-bit TLS</p>
+              <p className="text-xs text-gray-400">encryption</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gold mb-1">SOC 2 Type II</p>
+              <p className="text-xs text-gray-400">certified infrastructure</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gold mb-1">GDPR compliant</p>
+              <p className="text-xs text-gray-400">ICO registered</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gold mb-1">Row-level</p>
+              <p className="text-xs text-gray-400">data isolation</p>
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <p className="text-sm font-semibold text-gold mb-1">Independent</p>
+              <p className="text-xs text-gray-400">security audits</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
