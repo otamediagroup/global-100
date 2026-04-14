@@ -1,106 +1,59 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark border-b border-navy/50 backdrop-blur-sm">
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+    <nav className="sticky top-0 z-50 bg-navy px-6 py-5">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <img
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <Image
               src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69de03dbd3fc7cf8da2de059_Global%20100%20Logo%20Transparent.png"
               alt="Global 100"
-              className="h-10 w-auto"
+              width={160}
+              height={50}
+              className="h-9 md:h-11 w-auto"
+              priority
             />
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-300 hover:text-gold transition-colors">
-              Rankings
-            </Link>
-            <Link href="/methodology" className="text-gray-300 hover:text-gold transition-colors">
-              Methodology
-            </Link>
-            <a
-              href="https://fifty.otamediagroup.com"
-              className="text-gray-300 hover:text-gold transition-colors"
-            >
-              The Fifty
-            </a>
+          {/* Desktop nav */}
+          <div className="hidden md:flex gap-6 items-center">
+            <a href="/#rankings" className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Rankings</a>
+            <Link href="/methodology" className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Methodology</Link>
+            <a href="https://fifty.otamediagroup.com" className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">The Fifty</a>
+            <a href="https://index.otamediagroup.com" className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Leadership Index</a>
+            <a href="https://www.otamediagroup.com" className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">OTA Media</a>
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:block">
-            <a
-              href="https://index.otamediagroup.com"
-              className="px-6 py-2 bg-gold text-dark font-semibold rounded hover:bg-opacity-90 transition-all"
-            >
-              Leadership Index
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Hamburger */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-navy transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex md:hidden flex-col gap-[5px] p-1 cursor-pointer"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
-            <svg
-              className="w-6 h-6 text-gold"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            <span className={`block w-6 h-[2px] bg-white transition-transform duration-300 ${isOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-transform duration-300 ${isOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-6 space-y-4 border-t border-navy">
-            <Link
-              href="/"
-              className="block text-gray-300 hover:text-gold transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Rankings
-            </Link>
-            <Link
-              href="/methodology"
-              className="block text-gray-300 hover:text-gold transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Methodology
-            </Link>
-            <a
-              href="https://fifty.otamediagroup.com"
-              className="block text-gray-300 hover:text-gold transition-colors py-2"
-            >
-              The Fifty
-            </a>
-            <div className="pt-4">
-              <a
-                href="https://index.otamediagroup.com"
-                className="block px-6 py-2 bg-gold text-dark font-semibold rounded hover:bg-opacity-90 transition-all text-center"
-              >
-                Leadership Index
-              </a>
-            </div>
+        {/* Mobile menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="flex flex-col gap-4 pt-6 pb-2 border-t border-white/10 mt-5">
+            <a href="/#rankings" onClick={() => setIsOpen(false)} className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Rankings</a>
+            <Link href="/methodology" onClick={() => setIsOpen(false)} className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Methodology</Link>
+            <a href="https://fifty.otamediagroup.com" onClick={() => setIsOpen(false)} className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">The Fifty</a>
+            <a href="https://index.otamediagroup.com" onClick={() => setIsOpen(false)} className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">Leadership Index</a>
+            <a href="https://www.otamediagroup.com" onClick={() => setIsOpen(false)} className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors">OTA Media</a>
           </div>
-        )}
-      </div>
+        </div>
     </nav>
-  );
+  )
 }
