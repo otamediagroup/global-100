@@ -38,7 +38,11 @@ export default function Home() {
       <section className="gradient-hero pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="container-custom">
           <div className="text-center mb-12 animate-slideInLeft">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">The Global 100</h1>
+            <img
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69de03db684c57d9614bac63_Global%20100%20Logo%20v2.png"
+              alt="Global 100"
+              className="mx-auto mb-8 w-full max-w-2xl"
+            />
             <p className="text-xl md:text-2xl text-gold mb-6">
               Ranking the leaders of the world's most sustainable corporations
             </p>
