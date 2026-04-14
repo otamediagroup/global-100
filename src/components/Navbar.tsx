@@ -11,14 +11,12 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="text-2xl font-bold text-gold group-hover:text-white transition-colors">
-              G100
-            </div>
-            <div className="hidden sm:flex flex-col">
-              <span className="text-xs uppercase tracking-wider text-gray-400">OTA Media</span>
-              <span className="text-xs font-semibold text-gold">Global 100</span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69de03dbd3fc7cf8da2de059_Global%20100%20Logo%20Transparent.png"
+              alt="Global 100"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Menu */}
