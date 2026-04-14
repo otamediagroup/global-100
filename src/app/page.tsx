@@ -225,6 +225,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Nominate Section */}
+      <section id="nominate" className="py-16 md:py-24 border-t border-navy/50 bg-navy/30">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-gradient">50 Ranked. 50 Seats Open.</span>
+            </h2>
+            <p className="text-gray-300 mb-3 text-lg">
+              The Global 100 is not complete. We are looking for the next 50 leaders
+              who are transforming global business through sustainable leadership.
+            </p>
+            <p className="text-gray-400 mb-8">
+              Nominate a CEO, Chair, or senior executive you believe deserves a place
+              on the Global 100. All nominees are assessed through the OTA Power Score
+              methodology and reviewed by our advisory panel.
+            </p>
+            
+              href="mailto:nominations@otamediagroup.com?subject=Global%20100%20Nomination"
+              className="inline-block px-8 py-4 bg-gold text-dark font-bold rounded-lg text-lg hover:bg-opacity-90 transition-all"
+            >
+              Nominate a Leader
+            </a>
+            <p className="text-xs text-gray-500 mt-4">
+              Nominations close 31 December 2026. All submissions reviewed by the OTA Media editorial team.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-navy to-dark border-t border-navy/50">
         <div className="container-custom text-center">
