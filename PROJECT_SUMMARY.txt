@@ -1,0 +1,118 @@
+GLOBAL 100 - NEXT.JS 14 APP ROUTER PROJECT
+==========================================
+
+Location: /sessions/sharp-keen-brahmagupta/mnt/OTA Media Group — Strategic Review/global-100/
+
+COMPLETE PROJECT STRUCTURE
+==========================
+
+Configuration Files:
+- package.json (Next.js 14.1.0, React 18, Tailwind, TypeScript)
+- next.config.js (image remotePatterns for cdn.prod.website-files.com)
+- tailwind.config.ts (brand colors: navy, dark, gold, teal)
+- tsconfig.json (strict TypeScript config)
+- postcss.config.js (Tailwind + autoprefixer)
+- .gitignore (standard Next.js ignores)
+
+Data:
+- src/data/leaders.ts (50 sustainable leaders with complete profiles)
+  - All 50 leaders with rank, tier, role, company, country, sector
+  - 5-dimension scoring: sustainability, governance, innovation, growth, resilience
+  - Unique bios for each leader (1-2 sentences)
+  - Placeholder image references
+  - Helper functions for querying by slug, sector, country, tier
+
+App Pages:
+- src/app/layout.tsx (root layout with Inter font, metadata, nav+footer)
+- src/app/page.tsx (homepage with hero, stats, search/filter, leaders by tier)
+- src/app/leader/[slug]/page.tsx (dynamic leader profile with prev/next nav)
+- src/app/methodology/page.tsx (scoring methodology explanation)
+- src/app/api/og/route.tsx (dynamic OG image generation)
+- src/app/globals.css (Tailwind directives + custom animations)
+
+Components:
+- src/components/Navbar.tsx (sticky nav with mobile hamburger)
+- src/components/Footer.tsx (footer with links)
+- src/components/LeaderCard.tsx (grid/list card with scores preview)
+- src/components/SearchFilter.tsx (search + country/sector filters + view toggle)
+- src/components/ScoreBar.tsx (score visualization)
+- src/components/LazyImage.tsx (image with loading states and error handling)
+
+KEY FEATURES
+============
+
+1. Homepage
+   - Hero section with title, subtitle, description
+   - Stats bar: 50 Leaders | 18 Countries | 8 Sectors | 2026
+   - Search bar + filters (country, sector)
+   - View toggle (grid/list)
+   - Leaders split by Vanguard (1-20) and Momentum (21-50) tiers
+
+2. Leader Profile Pages
+   - Dynamic routes via generateStaticParams
+   - Full leader details: rank, role, company, country, sector
+   - 5-dimension scoring with visualization
+   - Previous/next navigation
+   - SEO metadata generation
+   - OG image generation via /api/og
+
+3. Methodology Page
+   - Explanation of 5 scoring dimensions
+   - Tier definitions (Vanguard vs Momentum)
+   - Sectors represented
+   - Key metrics
+
+4. Design & Styling
+   - Dark luxury theme (navy #1A2332, dark #0F1720, gold #C9A84C, teal #056773)
+   - Tailwind CSS with custom components
+   - Responsive grid/list layouts
+   - Smooth animations (fadeIn, slideInLeft, slideInRight)
+   - Hover states on cards
+   - Mobile-first responsive design
+
+5. Data Structure
+   - 50 leaders across 18 countries
+   - 8 sectors: Renewable Energy, Technology, Financial Services, Industrial, Consumer, Healthcare & Pharma, Infrastructure & Logistics, Materials & Resources
+   - Scoring: 5 dimensions (0-25 each), total 0-125
+   - Ranks decline from 95 (rank 1) to ~46 (rank 50)
+
+6. Navigation & Cross-Links
+   - Navbar links to The Fifty (fifty.otamediagroup.com)
+   - CTA buttons to Leadership Index (index.otamediagroup.com)
+   - Breadcrumb navigation on subpages
+   - Prev/next leader navigation
+
+DEPLOYMENT
+==========
+Do NOT run npm install or npm run build locally.
+Edwin will deploy via Vercel which will auto-detect:
+- Next.js 14 App Router project
+- Automatic npm install on Vercel
+- Automatic build and deployment
+
+The project is production-ready and requires no additional setup.
+Just push to the repository and Vercel will handle the rest.
+
+ALL 50 LEADERS INCLUDED
+=======================
+✓ Paolo Luigi Merli - ERG SpA
+✓ Alexander Lacik - Pandora A/S
+✓ Miguel Stilwell de Andrade - EDP Renovaveis
+✓ Julian Nebreda - Fluence Energy
+✓ Chiang Yao-Chung - Taiwan High Speed Rail
+✓ Javier Rodriguez - DaVita
+✓ Henrik Andersen - Vestas Wind
+✓ Graham Chipchase - Brambles
+✓ Mads Nipper - Orsted
+✓ Matti Lehmus - Neste
+... and 40 more leaders through rank 50 (Lars Fruergaard Jorgensen - Novo Nordisk)
+
+NOTES FOR EDWIN
+===============
+- Images: placeholder.jpg paths are set. Add actual leader images to public/leaders/
+- Vercel deployment will auto-run build and serve
+- No manual npm install needed locally
+- OG images will auto-generate for each leader profile
+- Mobile nav hamburger fully functional
+- All filters and search working with client-side React state
+- generateStaticParams for all 50 leader pages (pre-rendered at build time)

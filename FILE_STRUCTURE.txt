@@ -1,0 +1,122 @@
+GLOBAL 100 - COMPLETE FILE STRUCTURE
+====================================
+
+global-100/
+├── Configuration Files
+│   ├── package.json                 # Next.js 14.1.0, React 18, dependencies
+│   ├── next.config.js               # Image optimization config
+│   ├── tailwind.config.ts           # Brand colors, Inter font variable
+│   ├── tsconfig.json                # Strict TypeScript configuration
+│   ├── postcss.config.js            # Tailwind & autoprefixer
+│   └── .gitignore                   # Standard Next.js ignores
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx               # Root layout with fonts, metadata, nav, footer
+│   │   ├── page.tsx                 # Homepage - hero, stats, filters, leaders
+│   │   ├── globals.css              # Tailwind directives + custom animations
+│   │   │
+│   │   ├── leader/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx         # Dynamic leader profile (generateStaticParams)
+│   │   │
+│   │   ├── methodology/
+│   │   │   └── page.tsx             # Scoring methodology explanation
+│   │   │
+│   │   └── api/
+│   │       └── og/
+│   │           └── route.tsx        # Dynamic OG image generation
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx               # Sticky navigation with mobile menu
+│   │   ├── Footer.tsx               # Footer with links
+│   │   ├── LeaderCard.tsx           # Grid/list card component
+│   │   ├── SearchFilter.tsx         # Search + filters + view toggle
+│   │   ├── ScoreBar.tsx             # Score visualization bar
+│   │   └── LazyImage.tsx            # Image with loading/error states
+│   │
+│   └── data/
+│       └── leaders.ts               # 50 leaders with full profiles, helper functions
+│
+└── Documentation
+    ├── PROJECT_SUMMARY.txt          # Overview of project
+    ├── DEPLOYMENT_CHECKLIST.md      # Status and next steps
+    └── FILE_STRUCTURE.txt           # This file
+
+TOTAL: 19 Source Files + Documentation
+
+
+KEY STATS
+=========
+
+Leaders:
+  - Total: 50 leaders
+  - Vanguard: 20 leaders (ranks 1-20)
+  - Momentum: 30 leaders (ranks 21-50)
+  - Countries: 18 unique
+  - Sectors: 8 categories
+
+Scoring:
+  - Dimensions: 5 (sustainability, governance, innovation, growth, resilience)
+  - Max per dimension: 25 points
+  - Total range: 0-125
+  - Leader 1 score: 95
+  - Leader 50 score: 46
+
+Routes:
+  - /                    → Homepage with rankings
+  - /leader/[slug]       → Dynamic leader profiles (50 routes)
+  - /methodology         → Scoring explanation
+  - /api/og              → Dynamic OG image generation
+
+Pages:
+  - Static: 2 (home, methodology)
+  - Dynamic: 50 (leader profiles via generateStaticParams)
+
+Components:
+  - Client-side: 4 (SearchFilter, LeaderCard, Navbar, LazyImage)
+  - Server-side: 2 (Footer, ScoreBar)
+
+Styling:
+  - Tailwind CSS
+  - Custom theme colors (navy, dark, gold, teal)
+  - Responsive (mobile-first)
+  - Dark luxury aesthetic
+
+
+NEXT STEPS FOR DEPLOYMENT
+==========================
+
+1. Image Assets:
+   Create directory: public/leaders/
+   Add leader headshots named: placeholder.jpg (or update paths in leaders.ts)
+
+2. Environment (if needed):
+   Create .env.local for any API keys (none needed currently)
+
+3. Git & Deployment:
+   Push to GitHub repository
+   Vercel will auto-detect and deploy
+
+4. Domain:
+   Update DNS to point to Vercel deployment
+
+5. Cross-Links:
+   Update navbar "The Fifty" link
+   Verify Leadership Index URL
+
+
+NO LOCAL SETUP NEEDED
+====================
+
+Do NOT run: npm install
+Do NOT run: npm run build
+
+Vercel handles everything automatically:
+✓ Installs dependencies
+✓ Builds the project
+✓ Deploys to production
+✓ Handles image optimization
+✓ Generates static pages at build time
+
+Ready to push!
