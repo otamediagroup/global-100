@@ -9,7 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="text-2xl font-bold text-gold mb-3">Global 100</div>
+            <img
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69de03dbd3fc7cf8da2de059_Global%20100%20Logo%20Transparent.png"
+              alt="Global 100"
+              className="h-10 w-auto mb-3"
+            />
             <p className="text-gray-400 text-sm">
               Ranking sustainable corporate leaders transforming global business responsibility.
             </p>
