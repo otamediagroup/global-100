@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { leaders, countries, sectors } from '@/data/leaders';
 import LeaderCard from '@/components/LeaderCard';
 import SearchFilter from '@/components/SearchFilter';
