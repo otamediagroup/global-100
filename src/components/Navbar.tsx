@@ -1,11 +1,21 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isEmbedded, setIsEmbedded] = useState(false)
+
+  useEffect(() => {
+    // When embedded inside Leadership Index app (via ?embed=1), hide this
+    // nav to avoid doubling up with the parent app's navbar.
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('embed') === '1') setIsEmbedded(true)
+  }, [])
+
+  if (isEmbedded) return null
 
   return (
     <nav className="sticky top-0 z-50 bg-navy px-6 py-5">
